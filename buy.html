@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>رنک‌های سرور بزرگ ای‌پی‌کرفت</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000; /* پس‌زمینه مشکی */
+    font-family: "Vazir", sans-serif;
+    color: #fff;
+    cursor: none;
+}
+
+/* موس آبی پررنگ */
+#cursor {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #0040ff;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* عنوان صفحه */
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 38px;
+    font-weight: bold;
+    color: #4b0090; /* بنفش */
+    text-shadow: 0 0 10px #6a00b3;
+}
+
+/* دکمه برگشت به منوی اصلی */
+.main-btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 12px 25px;
+    background-color: #4b0090;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    width: 220px;
+    transition: 0.3s;
+}
+.main-btn:hover {
+    background-color: #6a00b3;
+}
+
+/* کانتینر کارت‌ها */
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* کارت‌ها عمودی */
+.cards {
+    display: flex;
+    flex-direction: column; /* عمودی */
+    gap: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.card {
+    background: #b0b0b0; /* طوسی متوسط */
+    width: 350px; /* بزرگ */
+    height: 180px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(75,0,144,0.3);
+    transition: 0.3s;
+    border: 3px solid #4b0090; /* خط بنفش */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 30px rgba(75,0,144,0.6);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    color: #4b0090; /* بنفش */
+}
+.card p {
+    margin: 0;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* فوتر */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4b0090; /* بنفش */
+    color: #e3d7ff;
+    font-size: 17px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 15px #6a00b3;
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<h1 class="title">رنک‌های سرور بزرگ ای‌پی‌کرفت</h1>
+
+<div class="container">
+    <div class="cards">
+        <div class="card" onclick="showMessage()" oncontextmenu="showMessage(event)">
+            <h3>اسپانسر</h3>
+            <p>بدرخش</p>
+        </div>
+        <div class="card" onclick="showMessage()" oncontextmenu="showMessage(event)">
+            <h3>ساپر</h3>
+            <p>درخشان</p>
+        </div>
+        <div class="card" onclick="showMessage()" oncontextmenu="showMessage(event)">
+            <h3>دایمند</h3>
+            <p>متمایز</p>
+        </div>
+        <div class="card" onclick="showMessage()" oncontextmenu="showMessage(event)">
+            <h3>گلد</h3>
+            <p>باحال</p>
+        </div>
+    </div>
+
+    <!-- دکمه برگشت به منوی اصلی -->
+    <a href="index.html" class="main-btn">برگشت به منوی اصلی</a>
+
+</div>
+
+<footer>
+    AP Craft Powred By maliali1213 And MoonXCraft Team
+</footer>
+
+<script>
+// موس اختصاصی
+const cursor = document.getElementById("cursor");
+document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+// نمایش پیام هنگام کلیک راست یا چپ روی کارت
+function showMessage(e){
+    if(e) e.preventDefault(); // جلوگیری از منوی پیشفرض راست کلیک
+    alert("برای خرید رنک در اپلیکیشن روبیکا به ایدی @MerVist_Mc پیام دهید");
+}
+</script>
+
+</body>
+</html>
