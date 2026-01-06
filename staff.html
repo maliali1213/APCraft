@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تیم مدیریتی AP Craft</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #d3d3d3; /* پس زمینه طوسی */
+    font-family: "Vazir", sans-serif;
+    color: #000;
+    cursor: none;
+}
+
+/* موس آبی */
+#cursor {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #0040ff;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* دکمه صفحه اصلی */
+.main-btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 12px 25px;
+    background-color: #4b0090;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    width: 180px;
+    transition: 0.3s;
+}
+.main-btn:hover {
+    background-color: #6a00b3;
+}
+
+/* عنوان صفحه */
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 38px;
+    font-weight: bold;
+    color: #002080;
+    text-shadow: 0 0 10px #0040ff;
+}
+
+/* کانتینر کارت‌ها */
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* عنوان بخش‌ها */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 25px 0 15px;
+    color: #000;
+    text-align: center;
+}
+
+/* کارت‌ها */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    width: 260px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,64,255,0.3);
+    transition: 0.3s;
+    border: 2px solid #0040ff;
+}
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 25px rgba(0,64,255,0.6);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #002080;
+}
+.card p {
+    margin: 0;
+    font-size: 16px;
+    color: #444;
+}
+
+/* کارت فاوندر */
+.card.founder {
+    border-color: gold;
+    background: #fff7d1;
+}
+
+/* فوتر */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4b0090;
+    color: #e3d7ff;
+    font-size: 17px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 15px #6a00b3;
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<!-- دکمه صفحه اصلی -->
+<a href="index.html" class="main-btn">صفحه اصلی</a>
+
+<h1 class="title">تیم مدیریتی ای‌پی‌کرفت</h1>
+
+<div class="container">
+
+    <!-- Founders -->
+    <div class="section-title">بنیان‌گذاران (Founders)</div>
+    <div class="cards">
+        <div class="card founder">
+            <h3>maliali1213</h3>
+            <p>Founder</p>
+        </div>
+        <div class="card founder">
+            <h3>Mr_Stable</h3>
+            <p>Founder</p>
+        </div>
+    </div>
+
+    <!-- Owners -->
+    <div class="section-title">Owner‌ها</div>
+    <div class="cards">
+        <div class="card">
+            <h3>sohbn</h3>
+            <p>رئیس</p>
+        </div>
+        <div class="card">
+            <h3>Mohabaty</h3>
+            <p>رئیس</p>
+        </div>
+    </div>
+
+    <!-- Co-Owners -->
+    <div class="section-title">Co-Owner‌ها</div>
+    <div class="cards">
+        <div class="card">
+            <h3>Hosseinhg365</h3>
+            <p>همکاری رئیس</p>
+        </div>
+        <div class="card">
+            <h3>Hamody</h3>
+            <p>همکاری رئیس</p>
+        </div>
+    </div>
+
+    <!-- H-Developer -->
+    <div class="section-title">H-Developer</div>
+    <div class="cards">
+        <div class="card">
+            <h3>KianLemon</h3>
+            <p>توسعه‌دهنده‌ی ارشد</p>
+        </div>
+    </div>
+
+    <!-- Developer -->
+    <div class="section-title">Developer</div>
+    <div class="cards">
+        <div class="card">
+            <h3>ali1117</h3>
+            <p>توسعه‌دهنده</p>
+        </div>
+    </div>
+
+    <!-- Admin -->
+    <div class="section-title">Admin</div>
+    <div class="cards">
+        <div class="card">
+            <h3>arash2233</h3>
+            <p>ادمین سرور</p>
+        </div>
+    </div>
+
+    <!-- Builder -->
+    <div class="section-title">Builder</div>
+    <div class="cards">
+        <div class="card">
+            <h3>its_ghost</h3>
+            <p>بیلدر</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    AP Craft By maliali1213 And MoonXCraft
+</footer>
+
+<script>
+// موس اختصاصی
+const cursor = document.getElementById("cursor");
+document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+</script>
+
+</body>
+</html>
